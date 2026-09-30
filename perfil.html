@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi perfil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <h1>Skill<span>Match</span></h1>
+
+        <input type="text" placeholder="¿Qué quieres aprender?" class="search">
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="perfil.html">Mi perfil</a>
+            <a href="#">Matchs</a>
+            <a href="#">Chats</a>
+            <a href="#">Ranking</a>
+        </nav>
+    </header>
+
+<section class="perfil-container">
+
+    <div class="perfil-card">
+
+        <div class="perfil-top">
+            <img src="images/perfil.jpg" alt="Foto perfil" class="perfil-img">
+
+
+            <div class="perfil-info">
+                <h2>Javier Ortiz</h2>
+
+                <p class="perfil-meta"> Rayon, Chiapas &nbsp;&nbsp;  Desde Octubre 2025</p>
+
+                <p class="perfil-desc">
+                    Desarrollador web apasionado por enseñar y aprender nuevas habilidades
+                </p>
+
+                <div class="perfil-rating">
+                    ⭐⭐⭐⭐☆ <span>4.8 (3 reseñas)</span>
+                </div>
+
+                <div class="perfil-skills">
+                    <span>React - Avanzado</span>
+                    <span>HTML - Avanzado</span>
+                    <span>CSS - Avanzado</span>
+                </div>
+            </div>
+
+            <button class="perfil-edit">Editar perfil</button>
+        </div>
+
+    </div>
+
+    <div class="perfil-stats">
+        <div class="stat-box">
+            <h3>15</h3>
+            <p>Intercambios completados</p>
+        </div>
+        <div class="stat-box">
+            <h3>3</h3>
+            <p>Intercambios activos</p>
+        </div>
+        <div class="stat-box">
+            <h3>8</h3>
+            <p>Conexiones activas</p>
+        </div>
+        <div class="stat-box">
+            <h3>5</h3>
+            <p>Insignias obtenidas</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- PIE DE PÁGINA -->
+    <footer class="footer">
+    <div class="footer-container">
+
+        <!-- COLUMNA 1 -->
+        <div class="footer-box">
+            <h3>¿Necesitas ayuda?</h3>
+            <p> 01 234 56 78</p>
+            <p> contacto@skillmatch.com</p>
+            <p> Rayón, Chiapas, México</p>
+        </div>
+
+        <!-- COLUMNA 2 -->
+        <div class="footer-box">
+            <h3>Síguenos</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+
+        <!-- COLUMNA 3 -->
+        <div class="footer-box">
+            <h3>SkillMatch</h3>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Nuestro equipo</a>
+            <a href="#">Contacto</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 SkillMatch | Intercambio de habilidades
+    </div>
+</footer>
+
+<script>
+    let index = 0;
+
+    function moveCarousel(direction) {
+        const carousel = document.getElementById("carousel");
+        const cardWidth = 320; // tarjeta + margen
+
+        index += direction;
+
+        // límites
+        if (index < 0) index = 0;
+        if (index > carousel.children.length - 1) {
+            index = carousel.children.length - 1;
+        }
+
+        carousel.style.transform = `translateX(${-index * cardWidth}px)`;
+    }
+</script>
+
+
+</body>
+</html>
